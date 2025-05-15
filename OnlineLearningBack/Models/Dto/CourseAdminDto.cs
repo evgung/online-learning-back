@@ -1,0 +1,12 @@
+﻿namespace OnlineLearningBack.Models.Dto
+{
+    public class CourseAdminDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Category { get; set; }
+        public int ReadingTime { get; set; }
+        public bool HasTest { get; set; }
+        public UserDto Author { get; set; }
+    }
+}
