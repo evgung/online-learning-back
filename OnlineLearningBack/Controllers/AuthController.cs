@@ -28,7 +28,6 @@ namespace OnlineLearningBack.Controllers
 
             var token = _authService.GenerateJwtToken(user);
             Response.Cookies.Append("jwt", token);
-            Response.Cookies.Append("id", user.Id);
             Response.Cookies.Append("isAdmin", user.IsAdmin.ToString());
             return Ok(new { token });
         }

@@ -8,6 +8,6 @@
         public bool HasTest { get; set; }
         public List<TextBlockDto> TextBlocks { get; set; } = new();
         public List<TestQuestionDto> TestQuestions { get; set; } = new();
-        public string AuthorId { get; set; }
+        public string AuthorToken { get; set; }
     }
 }

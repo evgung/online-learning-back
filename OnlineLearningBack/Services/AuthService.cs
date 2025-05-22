@@ -40,5 +40,22 @@ namespace OnlineLearningBack.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public string GetUserIdFromToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            if (!tokenHandler.CanReadToken(token))
+                throw new ArgumentException("Invalid JWT token");
+
+            var jwtToken = tokenHandler.ReadJwtToken(token);
+
+            var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+
+            if (userIdClaim == null)
+                throw new ArgumentException("User ID not found in token");
+
+            return userIdClaim.Value;
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DLeEFHcnoL8=",
+  "dgSpecHash": "Nz6SbGORdAQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
+  "projectFilePath": "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Evgung\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Evgung\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

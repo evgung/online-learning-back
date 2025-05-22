@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj": {}
+    "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj": {
+    "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
+        "projectUniqueName": "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
         "projectName": "OnlineLearningBack",
-        "projectPath": "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
+        "projectPath": "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\OnlineLearningBack.csproj",
         "packagesPath": "C:\\Users\\Evgung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Evgung\\source\\repos\\OnlineLearningBack\\OnlineLearningBack\\obj\\",
+        "outputPath": "D:\\Мои документы\\3 курс\\Разработка web-приложений\\OnlineLearningBack\\OnlineLearningBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Evgung\\AppData\\Roaming\\NuGet\\NuGet.Config",

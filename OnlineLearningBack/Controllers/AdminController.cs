@@ -17,6 +17,7 @@ namespace OnlineLearningBack.Controllers
             _db = db;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("courses")]
         public IActionResult GetAllCourses()
         {

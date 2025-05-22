@@ -15,25 +15,31 @@ namespace OnlineLearningBack.Controllers
     public class CoursesController : ControllerBase
     {
         private readonly AppDbContext _db;
+        private readonly AuthService _authService;
 
-        public CoursesController(AppDbContext db)
+        public CoursesController(AppDbContext db, AuthService authService)
         {
             _db = db;
+            _authService = authService;
         }
 
         [HttpGet]
         public IActionResult GetCourses(
+            [FromQuery] string? searchQuery,
             [FromQuery] string? category,
-            [FromQuery] int? readingTime,
+            [FromQuery] string? readingTime,
             [FromQuery] bool? hasTest)
         {
             var query = _db.Courses.AsQueryable();
 
+            if (!string.IsNullOrEmpty(searchQuery))
+                query = query.Where(c => c.Title.ToLower().Contains(searchQuery.ToLower()));
+
             if (!string.IsNullOrEmpty(category))
                 query = query.Where(c => c.Category == category);
 
-            if (readingTime.HasValue)
-                query = query.Where(c => c.ReadingTime <= readingTime);
+            if (!string.IsNullOrEmpty(readingTime))
+                query = query.Where(c => c.ReadingTime <= Convert.ToInt32(readingTime));
 
             if (hasTest.HasValue)
                 query = query.Where(c => c.HasTest == hasTest);
@@ -81,7 +87,7 @@ namespace OnlineLearningBack.Controllers
                     Answers = tq.Answers,
                     CorrectAnswerIndex = tq.CorrectAnswerIndex
                 }).ToList(),
-                AuthorId = courseDto.AuthorId,
+                AuthorId = _authService.GetUserIdFromToken(courseDto.AuthorToken),
             };
 
             _db.Courses.Add(course);

@@ -34,13 +34,18 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "searchQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "category",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "readingTime",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
